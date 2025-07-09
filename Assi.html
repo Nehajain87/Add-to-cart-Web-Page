@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Selection</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<style>
+    body {
+    font-family: sans-serif;
+    background-color: #f7f7f7;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+}
+
+.container {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 400px;
+    text-align: center;
+}
+
+.bogo-header {
+    color: #9b69ff;
+    margin-bottom: 20px;
+    font-size: 1.5em;
+}
+
+.product-option {
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    margin-bottom: 15px;
+    padding: 15px;
+    text-align: left;
+    position: relative;
+}
+
+.product-option label {
+    display: block;
+    cursor: pointer;
+}
+
+.product-option input[type="radio"] {
+    position: absolute;
+    left: 15px;
+    top: 15px;
+}
+
+.product-option .unit-count {
+    font-weight: bold;
+    margin-left: 30px; /* Adjust for radio button */
+}
+
+.product-option .discount-tag {
+    background-color: #69ff7b;
+    color: #fff;
+    padding: 2px 8px;
+    border-radius: 4px;
+    font-size: 0.8em;
+    margin-left: 10px;
+}
+
+.product-option .price {
+    float: right;
+    font-weight: bold;
+    font-size: 1.1em;
+}
+
+.product-option .original-price {
+    float: right;
+    text-decoration: line-through;
+    color: #999;
+    font-size: 0.9em;
+    margin-right: 5px;
+}
+
+.product-option .standard-price-text {
+    display: block;
+    margin-left: 30px;
+    color: #666;
+    font-size: 0.9em;
+}
+
+.product-option.popular {
+    border-color: #ff9969;
+    background-color: #fff0f5;
+}
+
+.product-option .most-popular {
+    background-color: #ff69b4;
+    color: #fff;
+    padding: 5px 10px;
+    border-radius: 0 8px 0 8px;
+    font-size: 0.7em;
+    position: absolute;
+    top: -1px;
+    right: -1px;
+}
+
+.options-group {
+    margin-top: 10px;
+    margin-left: 30px;
+}
+
+.option-row {
+    display: flex;
+    align-items: center;
+    margin-bottom: 5px;
+}
+
+.option-row span {
+    margin-right: 10px;
+}
+
+.option-row select {
+    padding: 5px;
+    border-radius: 4px;
+    border: 1px solid #ddd;
+    margin-right: 10px;
+}
+
+.delivery-info {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+    padding-top: 15px;
+    border-top: 1px dashed #eee;
+}
+
+.total-price {
+    font-weight: bold;
+    font-size: 1.2em;
+}
+
+.add-to-cart-btn {
+    background-color: #ff7669;
+    color: #fff;
+    border: none;
+    padding: 15px 20px;
+    border-radius: 8px;
+    font-size: 1.1em;
+    cursor: pointer;
+    width: 100%;
+    margin-top: 20px;
+}
+</style>
+<body>
+    <div class="container">
+        <h2 class="bogo-header">--------YAY! It's BOGO--------</h2>
+
+        <div class="product-option">
+            <input type="radio" id="unit1" name="units" checked>
+            <label for="unit1">
+                <span class="unit-count">1 Unit</span>
+                <span class="discount-tag">10% Off</span>
+                <span class="price">$10.00 USD</span>
+                <span class="original-price">$24.00 USD</span>
+                <span class="standard-price-text">Standard Price</span>
+            </label>
+        </div>
+
+        <div class="product-option popular">
+            <input type="radio" id="unit2" name="units">
+            <label for="unit2">
+                <span class="unit-count">2 Unit</span>
+                <span class="discount-tag">20% Off</span>
+                <span class="most-popular">MOST POPULAR</span>
+                <span class="price">$18.00 USD</span>
+                <span class="original-price">$24.00 USD</span>
+                <div class="options-group">
+                    <div class="option-row">
+                        <span>#1</span>
+                        <select>
+                            <option>S</option>
+                        </select>
+                        <select>
+                            <option>Black</option>
+                        </select>
+                    </div>
+                    <div class="option-row">
+                        <span>#2</span>
+                        <select>
+                            <option>S</option>
+                        </select>
+                        <select>
+                            <option>Colour</option>
+                        </select>
+                    </div>
+                </div>
+            </label>
+        </div>
+
+        <div class="product-option">
+            <input type="radio" id="unit3" name="units">
+            <label for="unit3">
+                <span class="unit-count">3 Unit</span>
+                <span class="discount-tag">30% Off</span>
+                <span class="price">$24.00 USD</span>
+                <span class="original-price">$24.00 USD</span>
+            </label>
+        </div>
+
+        <div class="delivery-info">
+            <span>Free Delivery</span>
+            <span class="total-price">Total : $18.00 USD</span>
+        </div>
+
+        <button class="add-to-cart-btn">+ Add to Cart</button>
+    </div>
+</body>
+</html>
